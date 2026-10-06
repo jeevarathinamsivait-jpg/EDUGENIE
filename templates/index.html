@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="EduGenie AI Learning Assistant"
+    >
+
+    <title>
+        EduGenie | AI Learning Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <div class="logo">
+            E
+        </div>
+
+        <div>
+
+            <h1>
+                EduGenie
+            </h1>
+
+            <p>
+                AI-powered learning assistant
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="status">
+
+        <span class="dot"></span>
+
+        Gemini AI
+
+    </div>
+
+</header>
+
+
+
+<main class="container">
+
+
+    <section class="hero">
+
+        <div>
+
+            <p class="eyebrow">
+                LEARN • PRACTICE • UNDERSTAND
+            </p>
+
+            <h2>
+                Your personal AI study companion.
+            </h2>
+
+            <p class="hero-text">
+
+                Ask questions, simplify concepts,
+                summarize notes, generate quizzes,
+                or create a learning path from
+                beginner to advanced.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="workspace">
+
+
+        <div class="card input-card">
+
+
+            <label for="task">
+                Choose a learning task
+            </label>
+
+
+            <select id="task">
+
+                <option value="qa">
+                    Q&A — Ask a question
+                </option>
+
+                <option value="explain">
+                    Explain — Simplify a concept
+                </option>
+
+                <option value="quiz">
+                    Quiz — Generate 3 MCQs
+                </option>
+
+                <option value="summarize">
+                    Summary — Summarize text
+                </option>
+
+                <option value="learn">
+                    Learning Path — Create a study plan
+                </option>
+
+            </select>
+
+
+
+            <label for="inputText">
+                Your input
+            </label>
+
+
+            <textarea
+                id="inputText"
+                placeholder="Example: Explain the Pythagoras theorem with a simple example..."
+            ></textarea>
+
+
+
+            <div class="controls">
+
+                <button
+                    id="sampleBtn"
+                    class="secondary"
+                >
+                    Try Sample
+                </button>
+
+
+                <button
+                    id="submitBtn"
+                    class="primary"
+                >
+
+                    <span id="buttonText">
+                        Generate
+                    </span>
+
+                    <span
+                        id="spinner"
+                        class="spinner hidden"
+                    ></span>
+
+                </button>
+
+            </div>
+
+
+            <p
+                id="error"
+                class="error hidden"
+            ></p>
+
+
+        </div>
+
+
+
+        <div class="card result-card">
+
+
+            <div class="result-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        RESULT
+                    </span>
+
+                    <h3 id="resultTitle">
+                        Your answer will appear here
+                    </h3>
+
+                </div>
+
+
+                <button
+                    id="copyBtn"
+                    class="icon-btn hidden"
+                >
+                    Copy
+                </button>
+
+            </div>
+
+
+
+            <div
+                id="result"
+                class="result empty"
+            >
+
+                <div class="empty-icon">
+                    ✦
+                </div>
+
+                <p>
+                    Choose a task, enter your content,
+                    and click Generate.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <section class="feature-grid">
+
+
+        <article>
+
+            <strong>
+                💡 Explain
+            </strong>
+
+            <span>
+                Understand complex concepts simply.
+            </span>
+
+        </article>
+
+
+        <article>
+
+            <strong>
+                ❓ Q&A
+            </strong>
+
+            <span>
+                Get concise academic answers.
+            </span>
+
+        </article>
+
+
+        <article>
+
+            <strong>
+                🧠 Quiz
+            </strong>
+
+            <span>
+                Practice with three MCQs.
+            </span>
+
+        </article>
+
+
+        <article>
+
+            <strong>
+                📝 Summary
+            </strong>
+
+            <span>
+                Turn long notes into revision points.
+            </span>
+
+        </article>
+
+
+        <article>
+
+            <strong>
+                🗺️ Learning Path
+            </strong>
+
+            <span>
+                Progress from beginner to advanced.
+            </span>
+
+        </article>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    EduGenie • Built with FastAPI + Google Gemini
+
+</footer>
+
+
+
+<script
+    src="{{ url_for('static', path='/app.js') }}"
+></script>
+
+
+</body>
+
+</html>
